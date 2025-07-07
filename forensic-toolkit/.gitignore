@@ -1,0 +1,17 @@
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+
+# Data and Models - These should not be tracked by Git
+data/
+models/
+
+# OS-specific
+.DS_Store
+Thumbs.db
