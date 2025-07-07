@@ -1,7 +1,3 @@
-
-"""
-Script to generate triplets for training
-"""
 import os
 import argparse
 import random
