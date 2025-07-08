@@ -1,15 +1,12 @@
-pandas==2.2.2
-torch==2.6.0
-torchvision==0.21.0
-tqdm==4.66.4
-numpy
-Pillow
-scikit-learn
+# requirements.txt
 fastapi
-uvicorn
-python-multipart
-jinja2
-opencv-python
-pyexiftool
-requests
-random
+uvicorn[standard]
+python-dotenv # For managing API keys (optional but recommended)
+python-multipart # For file uploads in FastAPI
+exiftool # Requires exiftool system-wide installation
+Pillow # For creating dummy images in metadata_analyzer test block
+# google-generativeai # Uncomment if you enable actual Gemini calls
+# requests # For weather API integration (future)
+# scikit-learn # For AI-powered metadata analysis (future)
+# tensorflow # For deep learning PRNU (future)
+# pytorch # For deep learning PRNU (future)
