@@ -2,6 +2,9 @@ import json
 import logging
 from datetime import datetime
 from pathlib import Path
+# You need to install the 'PyExifTool' package to use 'import exiftool'.
+# Install it with: pip install PyExifTool
+
 import exiftool
 from typing import Dict, Any, List, Union
 

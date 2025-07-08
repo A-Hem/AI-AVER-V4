@@ -9,7 +9,7 @@ from collections import defaultdict
 
 # Add src to path for imports
 import sys
-sys.path.append(str(Path(__file__).parent.parent))
+sys.path.append(str(Path(__file__).parent.parent)) 
 
 from src.utils import setup_logging, ensure_dir_exists, get_project_root
 

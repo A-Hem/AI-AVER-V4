@@ -3,7 +3,7 @@ fastapi
 uvicorn[standard]
 python-dotenv # For managing API keys (optional but recommended)
 python-multipart # For file uploads in FastAPI
-exiftool # Requires exiftool system-wide installation
+#exiftool-13.32 # Requires exiftool system-wide installation
 Pillow # For creating dummy images in metadata_analyzer test block
 # google-generativeai # Uncomment if you enable actual Gemini calls
 # requests # For weather API integration (future)
