@@ -1,0 +1,45 @@
+services:
+  - type: web
+    name: ai-aver-app
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app/main.py
+    envVars:
+      - key: ENV
+        value: production
+      - key: DATA_PATH
+        value: /data
+      - key: MODEL_PATH
+        value: /data/models
+    plan: free
+    autoDeploy: true
+    disk:
+      name: persistent-data
+      mountPath: /data
+      sizeGB: 10
+    healthCheckPath: /
+    healthCheckIntervalSeconds: 60
+
+  - type: worker
+    name: ai-aver-worker
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python scripts/generate-triplets.py --data_dir /data/raw --output_dir /data/processed
+    envVars:
+      - key: ENV
+        value: production
+      - key: DATA_PATH
+        value: /data
+    plan: free
+    autoDeploy: true
+    disk:
+      name: persistent-data
+      mountPath: /data
+      sizeGB: 10
+
+# Optional: add more workers for training, inference, or batch jobs as needed
+
+# Notes:
+# - The persistent disk is shared between services for data and model storage.
+# - Adjust disk size and plan as needed for production.
+# - Add secrets or more envVars as required for your deployment.
