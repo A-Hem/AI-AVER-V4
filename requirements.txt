@@ -1,12 +1,38 @@
-# requirements.txt
-fastapi
-uvicorn[standard]
-python-dotenv # For managing API keys (optional but recommended)
-python-multipart # For file uploads in FastAPI
-#exiftool-13.32 # Requires exiftool system-wide installation
-Pillow # For creating dummy images in metadata_analyzer test block
-# google-generativeai # Uncomment if you enable actual Gemini calls
-# requests # For weather API integration (future)
-# scikit-learn # For AI-powered metadata analysis (future)
-# tensorflow # For deep learning PRNU (future)
-# pytorch # For deep learning PRNU (future)
+# Core ML Framework
+torch>=2.1.0
+torchvision>=0.16.0
+torchaudio>=2.1.0
+
+# Computer Vision
+opencv-python>=4.8.0
+scikit-image>=0.22.0
+Pillow>=10.0.0
+imagehash>=4.3.1
+
+# Forensics Libraries
+ExifRead>=3.0.0
+python-magic>=0.4.27
+pyexiv2>=2.8.0
+hachoir>=3.1.3
+
+# Data Processing
+numpy>=1.24.0
+pandas>=2.0.0
+scipy>=1.10.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# ML Utilities
+scikit-learn>=1.3.0
+networkx>=3.1
+albumentations>=1.3.0
+
+# Database
+sqlalchemy>=2.0.0
+boto3>=1.28.0
+
+# Utilities
+tqdm>=4.65.0
+loguru>=0.7.0
+python-dateutil>=2.8.2
+requests>=2.31.0
