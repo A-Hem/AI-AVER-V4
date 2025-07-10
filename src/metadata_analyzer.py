@@ -1,6 +1,3 @@
-"""
-Advanced metadata analysis for evidence verification
-"""
 import os
 import json
 from datetime import datetime, timedelta
